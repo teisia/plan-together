@@ -8,7 +8,7 @@ require('dotenv').load();
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var trips = require('./routs/trips');
+var trips = require('./routes/trips');
 
 var app = express();
 
