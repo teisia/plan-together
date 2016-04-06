@@ -10,16 +10,16 @@ var app = angular.module('angApp', ['ngRoute', 'ngResource', 'satellizer'])
            templateUrl: 'partials/dashboard.html',
            controller: 'MainController'
    })
-       .when('/trips', {
+       .when('/trips/:id', {
            templateUrl: 'partials/trip.html',
-           controller: 'MainController'
+           controller: 'TripShowController'
    })
 
    $authProvider.google({
      clientId: '746466032586-fkn4lk9v4pccpa005accokik9u2m13cb.apps.googleusercontent.com',
      url: '/auth/google',
      authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth',
-     redirectUri: 'http://localhost:3000/_oauth/google',
+     redirectUri: 'http://localhost:5000/_oauth/google',
      requiredUrlParams: ['scope'],
      optionalUrlParams: ['display'],
      scope: ['profile', 'email'],
