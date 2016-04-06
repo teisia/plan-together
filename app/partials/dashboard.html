@@ -1,6 +1,8 @@
 <div>
-  <h1>trip list goes here</h1>
   <a href="/trips">trip link</a>
+</div>
+<div ng-repeat="trip in trip_collection">
+  {{trip.id}}
 </div>
 <button class='newPost' ng-click='togglePostForm()'><i class='fa fa-plus'></i>Create Trip</button>
 <div class='form' ng-show='showme'>
